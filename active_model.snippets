@@ -1,0 +1,33 @@
+## ActiveModel
+snippet habtm
+	has_and_belongs_to_many :${1:object}, :join_table => "${2:table_name}", :foreign_key => "${3}_id"${4}
+snippet hm
+	has_many :${1:object}
+snippet hmd
+	has_many :${1:other}s, :class_name => "${2:$1}", :foreign_key => "${3:$1}_id", :dependent => :destroy${4}
+snippet hmt
+	has_many :${1:object}, :through => :${2:object}
+snippet bt
+	belongs_to :${1:association}
+snippet ho
+	has_one :${1:object}
+snippet va
+	validates_associated :${1:attribute}
+snippet vao
+	validates_acceptance_of :${1:terms}
+snippet vc
+	validates_confirmation_of :${1:attribute}
+snippet ve
+	validates_exclusion_of :${1:attribute}, :in => ${2:%w( mov avi )}
+snippet vf
+	validates_format_of :${1:attribute}, :with => /${2:regex}/
+snippet vi
+	validates_inclusion_of :${1:attribute}, :in => %w(${2: mov avi })
+snippet vl
+	validates_length_of :${1:attribute}, :within => ${2:3}..${3:20}
+snippet vn
+	validates_numericality_of :${1:attribute}
+snippet vpo
+	validates_presence_of :${1:attribute}
+snippet vu
+	validates_uniqueness_of :${1:attribute}
